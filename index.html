@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RKS QP Maker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <!-- KaTeX for Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      @media print {
+        /* Hide all interactive elements */
+        .no-print, .no-print * { display: none !important; }
+        
+        /* Show the print template */
+        .print-only { display: block !important; }
+        
+        /* Reset containers to allow natural flow */
+        body, html, #root { 
+          overflow: visible !important; 
+          height: auto !important; 
+          background: white !important;
+        }
+        
+        /* Ensure standard page margins (0 to allow CSS padding control) */
+        @page { margin: 0; size: A4; }
+      }
+      /* Ensure math content is visible */
+      .math-content { display: inline-block; }
+      
+      /* Simple sup/sub styling correction */
+      sup { vertical-align: super; font-size: smaller; }
+      sub { vertical-align: sub; font-size: smaller; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "firebase/app": "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js",
+    "firebase/firestore": "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js",
+    "firebase/": "https://aistudiocdn.com/firebase@^12.6.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-50 text-slate-900">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

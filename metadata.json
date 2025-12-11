@@ -1,0 +1,5 @@
+{
+  "name": "RKS Question Paper Maker",
+  "description": "A comprehensive AI-powered question paper generator tailored for CBSE curriculum. Features Admin/Teacher roles, subscription management, and intelligent question generation.",
+  "requestFramePermissions": []
+}
